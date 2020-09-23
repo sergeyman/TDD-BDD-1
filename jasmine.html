@@ -1,0 +1,45 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine-html.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/boot.js"></script>
+</head>
+<body>
+<script>
+	function sayHello(n) {
+		return "Hi " + n;
+	}
+	
+	sum = a => b => c => a+b+c;	
+	
+	describe("Say Hi Suite", function() {
+		it("Should say hi to a ninja", function() {
+			expect(sayHello("Name")).toBe("Hi Name");
+		});
+		if("should fail", function() {
+			expect(false).toBe(true);
+		});
+	});	
+	
+	describe("A suite", function() {
+	  it("contains spec with an expectation", function() {
+		expect(true).toBe(true);
+	  });
+	});
+	
+	describe("A suite", function() {
+	  it("contains spec with an expectation", function() {
+		expect(sum(1)(2)(3)).toBe(6);
+	  });
+	});
+	
+	describe("A suite", function() {
+	  it("contains spec with an expectation", function() {
+		expect(sum(1)(2)(3)).toBe(6);
+	  });
+	});
+</script>
+</body>
+</html>
