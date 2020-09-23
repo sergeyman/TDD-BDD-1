@@ -8,11 +8,18 @@
 </head>
 <body>
 <script>
+	// function to test
 	function sayHello(n) {
 		return "Hi " + n;
 	}
 	
+	// arrow function to test
 	sum = a => b => c => a+b+c;	
+	
+	// js class to test 
+	var MyClass = function() {
+		this.message = "Hello Jasmine!";
+	};
 	
 	describe("Say Hi Suite", function() {
 		it("Should say hi to a ninja", function() {
@@ -29,16 +36,23 @@
 	  });
 	});
 	
-	describe("A suite", function() {
+	describe("A suite case for arrow curry function testing.", function() {
 	  it("contains spec with an expectation", function() {
 		expect(sum(1)(2)(3)).toBe(6);
 	  });
 	});
 	
-	describe("A suite", function() {
+	describe("A suite case for arrow curry function testing. One more.", function() {
 	  it("contains spec with an expectation", function() {
 		expect(sum(1)(2)(3)).toBe(6);
 	  });
+	});
+	
+	describe("MyClass Suite case", function() {
+		var myObj = new MyClass();
+		it("when accessing message, then it should be equal to \"Hello Jasmine\"", function() {
+			expect(myObj.message).toEqual("Hello Jasmine!");
+		});
 	});
 </script>
 </body>
