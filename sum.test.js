@@ -36,7 +36,28 @@ test('the data is peanut butter', () => {
 });
 */
 
+//SOER sum()()
+var assert = require('assert');
+const sumS = require('./sumS');
 
+let history = [];
+const old_console = console.log;
+
+describe('Jest: test sumS function', () => {
+	beforeEach(() => {
+		console.log = (...args) => { history.push(args); old_console.apply(this, args); }
+	});
+	
+	afterEach(() => {
+		history = [];
+	})
+	
+	it('sum(1) //1', () => {
+		sumS(1);
+		assert.equal(history[0][0], 1);
+	});
+	
+});
 
 
 /*

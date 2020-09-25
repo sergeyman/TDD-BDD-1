@@ -1,4 +1,6 @@
 //https://www.youtube.com/watch?v=mHXhuPHiDj8
+// Mock async fetch() manually
+
 /* 
 	test function, mocking - not to make real http calls
 */
